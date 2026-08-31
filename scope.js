@@ -1,6 +1,10 @@
-let age
-function checkAge() {
-    age= 25;
-}
-checkAge()
+
+let age=21
+
+// function checkAge() {
+//     age= 25;
+// }
+// checkAge()
+{
 console.log(age);
+}
