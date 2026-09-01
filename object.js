@@ -17,4 +17,5 @@ user.address = {
     state: "Punjab",
     zip: "40000"
 };
-console.log(Object.entries(user));
+// console.log(Object.entries(user));
+console.log(Object.keys(user));
