@@ -6,5 +6,6 @@ name.push("Ahmed", "Hassan");
 name.pop();
 name.shift();
 name.unshift("Zain");
-name.splice(2,0, "Usman");
+name.splice(2,0, "Usman", "Bilal");
+name.splice(1, 2);
 console.log(name);
