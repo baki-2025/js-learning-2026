@@ -1,3 +1,5 @@
+//we build a order processing system to understand the DRY and how important a function is 
+
 function isValidPrice(price) {
     return typeof price === 'number' && price >= 0;
 };
@@ -6,7 +8,7 @@ function isValidEmail(email) {
     return  email.includes('@') && email.includes('.');
 };
 
-function calculateDiscounted(price, discountPercent) {
+function calculateDiscount(price, discountPercent) {
     if (!isValidPrice(price)){
         return 0;
     }
@@ -31,16 +33,20 @@ function capitalized(str) {
 function processOrder(user,itemPrice,discountCode) {
     console.log(`...processing  order for : ${capitalized(user.name)} ...`);
     if(!isValidEmail(user.email)){
-        console.log("Error: Invalid user email ");
+        console.log("Error: Invalid user email");
         return;
     }
     let currentPrice = itemPrice;
     if(discountCode == "NLB"){
         currentPrice = calculateDiscount(itemPrice, 20);
-        console.log("20% Discount applied");
+        console.log("20% discount applied");
     }
     
     let totalBill = calculateFinalBill(currentPrice);
     console.log("Final amount to pay :", formatBDT(totalBill));
     console.log("Order completed successfully");
 }
+
+let user1 = { name: "Shakib", email: "shakib@example.com" };
+
+processOrder(user1, 2000, "NLB");
