@@ -15,5 +15,30 @@ function addStudent(name, age, dept) {
     students.push(newStudent);
     console.log("Student added successfully.");
 }
-addStudent("Charlie", 21, "ME");
-console.log(students);
+addStudent("Shakib", 27, "MIS")
+// addStudent("Charlie", 21, "ME");
+// console.log(students);
+
+function getAll() {
+    for(const student of students){
+    console.log(student)
+    }
+};
+
+getAll();
+
+function findStudent(id){
+    for(let student of students){
+        if(student.id == id){
+            foundstdnt = student;
+            break;
+        }
+    }
+    if(foundstdnt){
+        console.log("Found student: ", foundstdnt);
+    } else{
+        console.log("404 not found");
+    }
+}
+
+findStudent(102);
