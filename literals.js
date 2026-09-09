@@ -8,3 +8,8 @@ function getDiscount(price){
 }
 
 console.log(`You saved: ${getDiscount(price)} taka\n Your total bill is now ${(price*quantity)-getDiscount(price)} taka`,);
+
+
+let stock = 1;
+
+console.log(`Status: ${stock > 0  ? "In stock"+ " " + stock : "Out of stock"}`);
