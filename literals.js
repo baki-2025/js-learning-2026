@@ -7,4 +7,4 @@ function getDiscount(price){
     return price*0.1;
 }
 
-console.log(`You saved: ${getDiscount(price)} taka\n use this as an investment`);
+console.log(`You saved: ${getDiscount(price)} taka\n Your total bill is now ${(price*quantity)-getDiscount(price)} taka`,);
