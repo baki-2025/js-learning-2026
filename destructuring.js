@@ -44,6 +44,6 @@ const student2 = {
 const {
     name: std2Name ,
     address: { city: stdCity },
-    hobbies: {firstHobby}
+    hobbies: [firstHobby]
 } = student2;
 console.log(firstHobby, stdCity);
